@@ -1,5 +1,8 @@
 package ReverseString;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,6 +22,10 @@ public class Main {
 
         // Using reverse()
         System.out.println(reverseString4(s));
+
+        // Using recurse
+        // O(n) - Time complexity
+        System.out.println(reverseStringRecurse(s));
     }
 
     private static String reverseString(String s) {
@@ -49,6 +56,14 @@ public class Main {
 
     private static String reverseString4(String s) {
         return new StringBuilder(s).reverse().toString();
+    }
+
+    private static String reverseStringRecurse(String s) {
+        if (s.isEmpty()) {
+            return "";
+        }
+
+        return reverseStringRecurse(s.substring(1)) + s.charAt(0);
     }
 
 }

@@ -1,34 +1,35 @@
-package SelectionSort;
+package InsertionSort;
 
 public class Main {
-    public static void main(String[] args) {
-        int[] numbers = {1, 22, 2, 44, 23, 88, 256, 80, 1, 5, 6, 80};
 
-        int[] sortedNumbers = selectionSort(numbers);
+    public static void main(String[] args) {
+        int[] array = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+
+        int[] sortedNumbers = insertionSort(array);
+
         for (int number : sortedNumbers) {
-            System.out.println(number);
+            System.out.print(number + ", ");
         }
     }
 
     // O(n^2) - Time complexity
     // O(1) - Space complexity
-    private static int[] selectionSort(int[] array) {
-        int length = array.length - 1;
+    // This algorithm is useful for sorting a small number of items.
+    // It becomes inefficient when sorting input sequences having more than 100 items.
+    private static int[] insertionSort(int[] array) {
+        for (int i = 1; i < array.length; i++) {
+            int key = array[i];
+            int j = i - 1;
 
-        for (int i = 0; i < length; i++) {
-            int min = i;
-
-            for (int j = i + 1; j < length; j++) {
-                if (array[j] < array[min]) {
-                    min = j;
-                }
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j = j - 1;
             }
 
-            int temp = array[i]; 
-            array[i] = array[min];
-            array[min] = temp;
+            array[j + 1] = key;
         }
 
         return array;
     }
+
 }

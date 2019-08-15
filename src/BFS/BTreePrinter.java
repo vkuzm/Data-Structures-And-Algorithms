@@ -1,19 +1,20 @@
-package BinarySearchTree;
+package BFS;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import BinarySearchTree.BinarySearchTree.Node;
 
+@SuppressWarnings("Duplicates")
 class BTreePrinter {
 
-    public static void printNode(Node root) {
+    public static void printNode(BinarySearchTree.Node root) {
         int maxLevel = BTreePrinter.maxLevel(root);
 
         printNodeInternal(Collections.singletonList(root), 1, maxLevel);
     }
 
-    private static <T extends Comparable<?>> void printNodeInternal(List<Node> nodes, int level, int maxLevel) {
+    private static <T extends Comparable<?>> void printNodeInternal(List<BinarySearchTree.Node> nodes, int level, int maxLevel) {
         if (nodes.isEmpty() || BTreePrinter.isAllElementsNull(nodes))
             return;
 
@@ -24,8 +25,8 @@ class BTreePrinter {
 
         BTreePrinter.printWhitespaces(firstSpaces);
 
-        List<Node> newNodes = new ArrayList<>();
-        for (Node node : nodes) {
+        List<BinarySearchTree.Node> newNodes = new ArrayList<>();
+        for (BinarySearchTree.Node node : nodes) {
             if (node != null) {
                 System.out.print(node.value);
                 newNodes.add(node.left);
@@ -74,7 +75,7 @@ class BTreePrinter {
             System.out.print(" ");
     }
 
-    private static int maxLevel(Node node) {
+    private static int maxLevel(BinarySearchTree.Node node) {
         if (node == null)
             return 0;
 
