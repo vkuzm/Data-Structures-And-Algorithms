@@ -1,5 +1,10 @@
 package BFS;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 @SuppressWarnings("Duplicates")
 public class BinarySearchTree {
     class Node {
@@ -47,6 +52,76 @@ public class BinarySearchTree {
 
     public Node getRoot() {
         return this.root;
+    }
+
+    // Time complexity - O(n)
+    // Space complexity - O(n)
+    public boolean breadthFirstSearch(int searchValue) {
+        Node currentNode = this.root;
+        Queue<Node> queue = new LinkedList<>();
+
+        queue.add(currentNode);
+
+        while (!queue.isEmpty()) {
+            currentNode = queue.remove();
+
+            System.out.println(currentNode.value);
+
+            if (currentNode.value == searchValue) {
+                return true;
+            }
+            if (currentNode.left != null) {
+                queue.add(currentNode.left);
+            }
+            if (currentNode.right != null) {
+                queue.add(currentNode.right);
+            }
+        }
+
+        return false;
+    }
+
+    public List<Integer> breadthFirstSearchRecursive(Queue<Node> queue, List<Integer> list) {
+        if (queue.isEmpty()) {
+            return list;
+        }
+
+        Node currentNode = queue.remove();
+        list.add(currentNode.value);
+
+        if (currentNode.left != null) {
+            queue.add(currentNode.left);
+        }
+        if (currentNode.right != null) {
+            queue.add(currentNode.right);
+        }
+
+        return breadthFirstSearchRecursive(queue, list);
+    }
+
+    // Time complexity - O(n)
+    // Space complexity O(n) - (only queue)
+    // O(n + m) - (queue + explored list)
+    public List<Integer> breadthFirstSearchExplore() {
+        Node currentNode = this.root;
+        List<Integer> explored = new ArrayList<>();
+        Queue<Node> queue = new LinkedList<>();
+
+        queue.add(currentNode);
+
+        while (!queue.isEmpty()) {
+            currentNode = queue.remove();
+            explored.add(currentNode.value);
+
+            if (currentNode.left != null) {
+                queue.add(currentNode.left);
+            }
+            if (currentNode.right != null) {
+                queue.add(currentNode.right);
+            }
+        }
+
+        return explored;
     }
 
 }

@@ -1,5 +1,6 @@
 package BinarySearchTree;
 
+@SuppressWarnings("Duplicates")
 public class BinarySearchTree {
     class Node {
         Node left;
