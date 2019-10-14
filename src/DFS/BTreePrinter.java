@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("Duplicates")
-class BTreePrinter {
+class BTreePrinter{
 
     public static void printNode(BinarySearchTree.Node root) {
         int maxLevel = BTreePrinter.maxLevel(root);

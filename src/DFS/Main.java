@@ -16,18 +16,13 @@ public class Main {
         tree.insert(1);
 
         BTreePrinter.printNode(tree.getRoot());
-        System.out.println("IN ORDER");
         List<Integer> inOrder = tree.DFSInOrder();
-        System.out.println(inOrder.toString() + "\n");
+        System.out.println("InOrder: " + inOrder.toString());
 
-        BTreePrinter.printNode(tree.getRoot());
-        System.out.println("PRE ORDER");
         List<Integer> preOrder = tree.DFSPreOrder();
-        System.out.println(preOrder.toString() + "\n");
+        System.out.println("PreOrder: " + preOrder.toString());
 
-        BTreePrinter.printNode(tree.getRoot());
-        System.out.println("POST ORDER");
         List<Integer> postOrder = tree.DFSPostOrder();
-        System.out.println(postOrder.toString() + "\n");
+        System.out.println("PostOrder: " + postOrder.toString());
     }
 }

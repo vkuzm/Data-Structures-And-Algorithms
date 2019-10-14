@@ -2,7 +2,7 @@ package Graph.AdjacentUndirected;
 
 import java.util.LinkedList;
 
-@SuppressWarnings("unchecked")
+@SuppressWarnings("unchecked, Duplicates")
 public class AdjacentUndirectedGraph {
 
     private LinkedList<Integer>[] adjacentList;

@@ -2,10 +2,10 @@ package BinarySearchTree;
 
 @SuppressWarnings("Duplicates")
 public class BinarySearchTree {
-    class Node {
-        Node left;
-        Node right;
-        int value;
+    public class Node {
+        public Node left;
+        public Node right;
+        public int value;
 
         Node(int value) {
             this.left = null;

@@ -26,7 +26,7 @@ public class Main {
             return 2;
         }
 
-        for (int i = 2; i <= number; i++) {
+        for (int i = number; i >= 2; i--) {
             factorial *= i;
         }
 

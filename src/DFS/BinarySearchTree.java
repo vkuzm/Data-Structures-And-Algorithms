@@ -5,6 +5,7 @@ import java.util.List;
 
 @SuppressWarnings("Duplicates")
 public class BinarySearchTree {
+
     class Node {
         Node left;
         Node right;
@@ -77,7 +78,6 @@ public class BinarySearchTree {
             traverseInOrder(node.left, list);
         }
 
-        //System.out.println("add " + node.value);
         list.add(node.value);
 
         if (node.right != null) {
@@ -88,7 +88,7 @@ public class BinarySearchTree {
     }
 
     private List<Integer> traversePreOrder(Node node, List<Integer> list) {
-        System.out.println(node.value);
+       // System.out.println(node.value);
 
         list.add(node.value);
 
@@ -103,7 +103,7 @@ public class BinarySearchTree {
     }
 
     private List<Integer> traversePostOrder(Node node, List<Integer> list) {
-        System.out.println(node.value);
+       // System.out.println(node.value);
 
         if (node.left != null) {
             traversePostOrder(node.left, list);

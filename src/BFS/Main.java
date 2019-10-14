@@ -1,13 +1,5 @@
 package BFS;
 
-import Array.Array;
-import BFS.BinarySearchTree.Node;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 @SuppressWarnings("Duplicates")
 public class Main {
     public static void main(String[] args) {
