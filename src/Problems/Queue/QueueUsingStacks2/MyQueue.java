@@ -3,53 +3,46 @@ package Problems.Queue.QueueUsingStacks2;
 import java.util.Stack;
 
 class MyQueue {
-    Stack<Integer> in = new Stack<>();
-    Stack<Integer> out = new Stack<>();
 
-    /** Initialize your data structure here. */
-    public MyQueue() {
+  private Stack<Integer> stack = new Stack<>();
 
-    }
+  /**
+   * Push element x to the back of queue.
+   */
+  public void push(int x) {
+    Stack<Integer> tempStack = new Stack<>();
 
-    /** Push element x to the back of queue. */
-    public void push(int x) {
-        while(!out.isEmpty()) {
-            in.push(out.pop());
+    if (stack.empty()) {
+        stack.push(x);
+    } else {
+        while (!stack.empty()) {
+            tempStack.push(stack.pop());
         }
-        in.push(x);
-    }
-
-    /** Removes the element from in front of queue and returns that element. */
-    public int pop() {
-        if (out.isEmpty()) {
-            while (!in.isEmpty()) {
-                out.push(in.pop());
-            }
+        stack.push(x);
+        while (!tempStack.empty()) {
+            stack.push(tempStack.pop());
         }
-        return out.pop();
     }
+  }
 
-    /** Get the front element. */
-    public int peek() {
-        if (out.isEmpty()) {
-            while (!in.isEmpty()) {
-                out.push(in.pop());
-            }
-        }
-        return out.peek();
-    }
+  /**
+   * Removes the element from in front of queue and returns that element.
+   */
+  public int pop() {
+    return stack.pop();
+  }
 
-    /** Returns whether the queue is empty. */
-    public boolean empty() {
-        return in.isEmpty() && out.isEmpty();
-    }
+  /**
+   * Get the front element.
+   */
+  public int peek() {
+    return stack.peek();
+  }
+
+  /**
+   * Returns whether the queue is empty.
+   */
+  public boolean empty() {
+    return stack.empty();
+  }
 }
-
-/**
- * Your MyQueue object will be instantiated and called as such:
- * MyQueue obj = new MyQueue();
- * obj.push(x);
- * int param_2 = obj.pop();
- * int param_3 = obj.peek();
- * boolean param_4 = obj.empty();
- */
