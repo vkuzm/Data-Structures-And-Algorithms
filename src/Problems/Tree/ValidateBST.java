@@ -1,4 +1,4 @@
-package Problems.BST;
+package Problems.Tree;
 
 import BinarySearchTree.BinarySearchTree;
 import BinarySearchTree.BTreePrinter;

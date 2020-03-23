@@ -1,4 +1,4 @@
-package QueueUsingStacks;
+package Problems.Queue.QueueUsingStacks;
 
 import java.util.Stack;
 

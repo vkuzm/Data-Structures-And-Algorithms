@@ -1,4 +1,4 @@
-package ReverseLinkedLink;
+package Problems.LinkedList.ReverseLinkedLink;
 
 @SuppressWarnings("Duplicates")
 public class DoublyLinkedList {

@@ -1,4 +1,4 @@
-package InvertBinaryTree;
+package Problems.Tree.InvertBinaryTree;
 
 import BinarySearchTree.BinarySearchTree;
 import BinarySearchTree.BTreePrinter;

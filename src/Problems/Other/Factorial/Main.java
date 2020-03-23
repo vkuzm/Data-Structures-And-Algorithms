@@ -1,4 +1,4 @@
-package Factorial;
+package Problems.Other.Factorial;
 
 public class Main {
     public static void main(String[] args) {

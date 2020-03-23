@@ -1,6 +1,5 @@
-package Problems.BST;
+package Problems.Tree;
 
-import BinarySearchTree.BTreePrinter;
 import BinarySearchTree.BinarySearchTree;
 import BinarySearchTree.BinarySearchTree.Node;
 

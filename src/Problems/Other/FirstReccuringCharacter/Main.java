@@ -1,4 +1,4 @@
-package FirstReccuringCharacter;
+package Problems.Other.FirstReccuringCharacter;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package MergeSortedArrays;
+package Problems.Array.MergeSortedArrays;
 
 import java.util.Arrays;
 

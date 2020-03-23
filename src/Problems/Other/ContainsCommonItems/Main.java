@@ -1,4 +1,4 @@
-package ContainsCommonItems;
+package Problems.Other.ContainsCommonItems;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package FindAppropriateSumOfPairOfNumber;
+package Problems.Other.FindAppropriateSumOfPairOfNumber;
 
 public class Main {
 
